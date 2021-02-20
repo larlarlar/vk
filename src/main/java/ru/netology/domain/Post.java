@@ -21,6 +21,7 @@ public class Post {
     private int repostsSum;
     private int viewsSum;
     private boolean canPin;
+    private boolean isPinned;
     private boolean canLike;
     private int likesSum;
     private boolean canComment;
@@ -196,6 +197,14 @@ public class Post {
 
     public void setCanPin(boolean canPin) {
         this.canPin = canPin;
+    }
+
+    public boolean isPinned() {
+        return isPinned;
+    }
+
+    public void setPinned(boolean pinned) {
+        isPinned = pinned;
     }
 
     public boolean isCanLike() {
