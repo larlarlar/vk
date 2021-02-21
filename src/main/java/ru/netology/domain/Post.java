@@ -12,32 +12,19 @@ public class Post {
     private boolean addBookMark;
     private String text;
     private int linkPreview;
-    private int attachments;
-    private boolean canRepost;
-    private int reposterId;
+    private boolean attachments;
+    private Repost repostInfo;
     private boolean shareWithFriendViaMessage;
     private String copyLink;
     private boolean canReport;
-    private int repostsSum;
     private int viewsSum;
     private boolean canPin;
     private boolean isPinned;
-    private boolean canLike;
-    private int likesSum;
-    private boolean canComment;
-    private int commenterId;
-    private String commentText;
-    private boolean commentsQueue;
-    private boolean canLikeComment;
-    private int commentLikesSum;
-    private boolean canReportComment;
-    private boolean canReplyComment;
-    private int replierId;
-    private String commentReplyText;
-    private int commentsSum;
+    private Likes likesInfo;
+    private Comments commentsInfo;
     private boolean authorisatedUsersOnly;
     private boolean delete;
-    private String geo;
+    private Geo geoInfo;
 
     public int getId() {
         return id;
@@ -127,28 +114,20 @@ public class Post {
         this.linkPreview = linkPreview;
     }
 
-    public int getAttachments() {
+    public boolean isAttachments() {
         return attachments;
     }
 
-    public void setAttachments(int attachments) {
+    public void setAttachments(boolean attachments) {
         this.attachments = attachments;
     }
 
-    public boolean isCanRepost() {
-        return canRepost;
+    public Repost getRepostInfo() {
+        return repostInfo;
     }
 
-    public void setCanRepost(boolean canRepost) {
-        this.canRepost = canRepost;
-    }
-
-    public int getReposterId() {
-        return reposterId;
-    }
-
-    public void setReposterId(int reposterId) {
-        this.reposterId = reposterId;
+    public void setRepostInfo(Repost repostInfo) {
+        this.repostInfo = repostInfo;
     }
 
     public boolean isShareWithFriendViaMessage() {
@@ -175,14 +154,6 @@ public class Post {
         this.canReport = canReport;
     }
 
-    public int getRepostsSum() {
-        return repostsSum;
-    }
-
-    public void setRepostsSum(int repostsSum) {
-        this.repostsSum = repostsSum;
-    }
-
     public int getViewsSum() {
         return viewsSum;
     }
@@ -207,108 +178,20 @@ public class Post {
         isPinned = pinned;
     }
 
-    public boolean isCanLike() {
-        return canLike;
+    public Likes getLikesInfo() {
+        return likesInfo;
     }
 
-    public void setCanLike(boolean canLike) {
-        this.canLike = canLike;
+    public void setLikesInfo(Likes likesInfo) {
+        this.likesInfo = likesInfo;
     }
 
-    public int getLikesSum() {
-        return likesSum;
+    public Comments getCommentsInfo() {
+        return commentsInfo;
     }
 
-    public void setLikesSum(int likesSum) {
-        this.likesSum = likesSum;
-    }
-
-    public boolean isCanComment() {
-        return canComment;
-    }
-
-    public void setCanComment(boolean canComment) {
-        this.canComment = canComment;
-    }
-
-    public int getCommenterId() {
-        return commenterId;
-    }
-
-    public void setCommenterId(int commenterId) {
-        this.commenterId = commenterId;
-    }
-
-    public String getCommentText() {
-        return commentText;
-    }
-
-    public void setCommentText(String commentText) {
-        this.commentText = commentText;
-    }
-
-    public boolean isCommentsQueue() {
-        return commentsQueue;
-    }
-
-    public void setCommentsQueue(boolean commentsQueue) {
-        this.commentsQueue = commentsQueue;
-    }
-
-    public boolean isCanLikeComment() {
-        return canLikeComment;
-    }
-
-    public void setCanLikeComment(boolean canLikeComment) {
-        this.canLikeComment = canLikeComment;
-    }
-
-    public int getCommentLikesSum() {
-        return commentLikesSum;
-    }
-
-    public void setCommentLikesSum(int commentLikesSum) {
-        this.commentLikesSum = commentLikesSum;
-    }
-
-    public boolean isCanReportComment() {
-        return canReportComment;
-    }
-
-    public void setCanReportComment(boolean canReportComment) {
-        this.canReportComment = canReportComment;
-    }
-
-    public boolean isCanReplyComment() {
-        return canReplyComment;
-    }
-
-    public void setCanReplyComment(boolean canReplyComment) {
-        this.canReplyComment = canReplyComment;
-    }
-
-    public int getReplierId() {
-        return replierId;
-    }
-
-    public void setReplierId(int replierId) {
-        this.replierId = replierId;
-    }
-
-    public String getCommentReplyText() {
-        return commentReplyText;
-    }
-
-    public void setCommentReplyText(String commentReplyText) {
-        this.commentReplyText = commentReplyText;
-    }
-
-    public int getCommentsSum() {
-        return commentsSum;
-    }
-
-    public void setCommentsSum(int commentsSum) {
-        this.commentsSum = commentsSum;
+    public void setCommentsInfo(Comments commentsInfo) {
+        this.commentsInfo = commentsInfo;
     }
 
     public boolean isAuthorisatedUsersOnly() {
@@ -327,11 +210,11 @@ public class Post {
         this.delete = delete;
     }
 
-    public String getGeo() {
-        return geo;
+    public Geo getGeoInfo() {
+        return geoInfo;
     }
 
-    public void setGeo(String geo) {
-        this.geo = geo;
+    public void setGeoInfo(Geo geoInfo) {
+        this.geoInfo = geoInfo;
     }
 }
